@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CRUD App</title>
+</head>
+<body>
+    <%# form to POST data%>
+    <form method="POST"  action=<%='/update/'+ data._id%> class="postForm">
+        <h1>update data that id is <%= data._id%></h1>
+        <input type="text" name="name" value=<%= data.name%> required placeholder="enter name" />
+        <input type="number" name="age" value=<%= data.age%> required placeholder="enter age" />
+        <div>
+            <label>married status: </label><br>
+            <input type="radio" name="married" value="true" required >
+            <label for="true">true</label>
+            <input type="radio" name="married" value="false" required>
+            <label for="false">false</label>
+        </div>
+        <div>
+            <label>select hoppies: </label><br>
+            <input type="checkbox" name="hoppies" value="programming">
+            <label>programming</label><br>
+            <input type="checkbox" name="hoppies" value="gammes">
+            <label>gammes</label><br>
+            <input type="checkbox" name="hoppies" value="football">
+            <label>football</label><br>
+        </div>
+        <input type="text" name="father" value=<%= data.parents.father%> required placeholder="enter father" />
+        <input type="text" name="mother" value=<%= data.parents.mother%> required placeholder="enter mother" />
+        <input type="submit" value="update document" />
+        <button onclick="window.location = '/'">
+            go back 
+        </button>
+    </form>
+
+    <script src="./javaScript/main.js"></script>
+</body>
+</html>

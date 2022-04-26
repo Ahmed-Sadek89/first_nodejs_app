@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    text-transform: capitalize;
+}
+.table{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px 0px;
+}
+table, th, td {
+    border: 2px solid #fff;
+    border-collapse: collapse;
+    background-color: #333;
+    color: rgb(228, 225, 225)
+}
+th, td {
+    padding: 5px 10px
+}
+
+button, input[type='submit']{
+    cursor: pointer;
+}
+
+.postForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px
+}
+.postForm > *{
+    margin: 10px 0px
+}
+.postForm input{
+    padding: 10px 3px;
+    border-radius: 20px;
+    border: solid 1px #333;
+    outline: none;
+}
+.postForm input[type='submit']{
+    border-radius: 20px;
+    padding: 10px;
+}

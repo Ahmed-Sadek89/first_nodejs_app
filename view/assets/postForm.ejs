@@ -1,0 +1,25 @@
+<form method="POST" action="/" class="postForm">
+    <h1>post your data here..</h1>
+    <input type="text" name="name" required placeholder="enter name" />
+    <input type="number" name="age" required placeholder="enter age" />
+    <div>
+        <label>married status: </label><br>
+        <input type="radio" name="married" value="true" required >
+        <label for="true">true</label>
+        <input type="radio" name="married" value="false" required>
+        <label for="false">false</label>
+    </div>
+    <%# hoppies did not add%>
+    <div>
+        <label>select hoppies: </label><br>
+        <input type="checkbox" name="hoppies" value="programming" >
+        <label>programming</label><br>
+        <input type="checkbox" name="hoppies" value="gammes" >
+        <label>gammes</label><br>
+        <input type="checkbox" name="hoppies" value="football" >
+        <label>football</label><br>
+    </div>
+    <input type="text" name="father" required placeholder="enter father" />
+    <input type="text" name="mother" required placeholder="enter mother" />
+    <input type="submit" value="insert document" />
+</form>

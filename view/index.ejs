@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CRUD App</title>
+</head>
+<body>
+    <%# form to POST data%>
+    <%- include('./assets/postForm') %>
+    <div class="table">
+        <table>
+            <%# heading %>
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>married</th>
+                <th>hoppies</th>
+                <th>parents</th>
+                <th>count: <%= data.length%></th>
+            </tr>
+            <%# body %>
+            <%- include('./assets/mapping.ejs')%>
+        </table>
+    </div>
+    <script src="./javaScript/main.js"></script>
+</body>
+</html>

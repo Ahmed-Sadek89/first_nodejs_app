@@ -1,0 +1,34 @@
+<% if(data.length > 0){ %>
+<% data.map((index) =>{ %>
+<tr>
+    <td><%= index.name%></td>
+    <td><%= index.age%></td>
+    <td><%= index.married%></td>
+    <td>
+        <% index.hoppies.map((i) =>{ %>
+            <%= i%>
+        <% }) %>
+    </td>
+    <td>
+        father: <b><%= index.parents.father%></b>
+        and mother: <b><%= index.parents.mother%></td><b>
+    </td>
+    <td>
+        <button type="submit" class="update" onclick=" window.location = '/update/<%= index._id%>';">
+            update
+        </button>
+    </td>
+    <td>
+        <form method="POST" action=<%='/delete/'+ index._id%>>
+            <button type="submit" class="delete">
+                delete
+            </button>
+        </form>
+    </td>
+</tr>
+<%})%>
+<%}else{%>
+    <tr>
+        <td>no data</td>
+    </tr>
+<%}%>
