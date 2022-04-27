@@ -1,6 +1,6 @@
 const {MongoClient} = require('mongodb');
 
-const url = 'mongodb+srv://EL_sadek:AhmedSadek01212758221@cluster0.rsemw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const url = 'mongodb://localhost:27017/myFirstDatabase'
 let dbConnection;
 
 module.exports = {
